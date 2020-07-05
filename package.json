@@ -1,0 +1,48 @@
+{
+    "name": "koa-std-shaojie",
+    "version": "1.0.0",
+    "description": "Node.js Back-end project scaffold based on Koa, TypeScript & LeanCloud",
+    "author": "shaojie.lo",
+    "private": true,
+    "main": "dist/index.js",
+    "engines": {
+        "node": "^12.0.0"
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "overrides": [
+            {
+                "files": "*.yml",
+                "options": {
+                    "tabWidth": 2
+                }
+            }
+        ]
+    },
+    "scripts": {
+        "dev": "nodemon src/WebServer.ts",
+        "build": "tsc",
+        "deploy": "lint-staged  &&  tsc  &&  lean deploy",
+        "start": "node dist/"
+    },
+    "dependencies": {
+        "class-transformer": "^0.2.3",
+        "class-validator": "^0.12.2",
+        "kcors": "^2.2.2",
+        "koa": "^2.13.0",
+        "koa-bodyparser": "^4.3.0",
+        "koa-logger": "^3.2.1",
+        "koa-router": "^9.1.0",
+        "reflect-metadata": "^0.1.13",
+        "routing-controllers": "^0.9.0-alpha.4"
+    },
+    "devDependencies": {
+        "@babel/plugin-transform-async-to-generator": "^7.10.4",
+        "@types/koa": "^2.11.3",
+        "@types/koa-bodyparser": "^4.3.0",
+        "@types/koa-logger": "^3.1.1",
+        "nodemon": "^2.0.4",
+        "ts-node": "^8.10.2",
+        "typescript": "^3.9.6"
+    }
+}
