@@ -1,8 +1,8 @@
 import { Controller, Get } from "routing-controllers";
 
-@Controller("/")
+@Controller()
 export default class MainController {
-    @Get()
+    @Get("/")
     getSession() {
         return "Hello, World!";
     }

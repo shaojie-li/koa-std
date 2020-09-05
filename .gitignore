@@ -64,3 +64,6 @@ typings/
 
 # Cloud services
 .leancloud/
+
+# Intellij .idea
+.idea

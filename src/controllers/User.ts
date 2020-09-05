@@ -10,12 +10,14 @@ import {
     Delete,
 } from "routing-controllers";
 
+import { UserModel } from "../model/User";
+
 @Controller("/user")
 export default class UserController {
     @Get()
-    @Authorized()
-    getAll() {
-        return "This action returns all users";
+    getAll(@Ctx() { ...currentUser }) {
+        console.log(currentUser);
+        return `This action returns all users`;
     }
 
     @Get("/:id")

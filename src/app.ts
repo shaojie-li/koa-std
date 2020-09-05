@@ -1,6 +1,5 @@
 import "reflect-metadata";
 import path from "path";
-import Koa from "koa";
 import Logger from "koa-logger";
 import bodyParser from "koa-bodyparser";
 import { createKoaServer } from "routing-controllers";
